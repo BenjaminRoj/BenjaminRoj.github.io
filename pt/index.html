@@ -424,6 +424,34 @@
 
           <div class="row g-0 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
+            <!-- Google Data Analytics Professional Certificate  -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-DS">
+              <div class="portfolio-content h-100">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <img src="assets\img\portfolio\google-data-analytics-professional-certificate-v2.png" class="img-fluid" alt="">
+                </div>
+                
+                <div class="portfolio-info">
+                  <a href="https://drive.google.com/file/d/1hIEGXNTIhWYxmJY7CRUCSu50c5w2GFsR/preview" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.credly.com/badges/b20c37b8-2dc5-450e-94fa-74a6b0c0ca3e/public_url" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Google AI Essentials -->
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-AI">
+              <div class="portfolio-content h-100">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <img src="assets\img\portfolio\google-ai-essentials-v1.png" class="img-fluid" alt="">
+                </div>
+                
+                <div class="portfolio-info">
+                  <a href="https://drive.google.com/file/d/1xAjaEgSboYFDPjFSRKnoNUUjjXEYUGTs/preview" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.credly.com/badges/97a14331-108f-444d-ae61-295114a65513/public_url" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
             <!-- Cisco linux unhatched -->
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-AI">
               <div class="portfolio-content h-100">
@@ -891,6 +919,70 @@
 
     </section><!-- /Gallery Section -->
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Contato</span>
+        <h2>Contato</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300" onsubmit="return submitForm()">
+          <div class="row gy-4">
+
+            <div class="col-md-12">
+              <input type="text" name="name" id="contactName" class="form-control" placeholder="Seu Nome" required>
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="Assunto" required>
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" id="contactMessage" rows="6" placeholder="Mensagem" required></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <button type="submit">Enviar Mensagem</button>
+            </div>
+
+          </div>
+        </form>
+
+        <script>
+          function submitForm() {
+            // Obtener los valores de los campos del formulario
+            const name = document.getElementById('contactName').value;
+            //const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+
+            // Crear el cuerpo del correo con los datos
+            const asunto = `Name: ${name} | Subject: ${subject}`;
+            
+            // Codificar los valores para que sean válidos en una URL
+            const encodedSubject = encodeURIComponent(asunto);
+            const encodedBody = encodeURIComponent(message);
+
+            // Crear el enlace mailto
+            const mailtoLink = `mailto:benjaminroj2001@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+
+            // Abrir el cliente de correo del usuario
+            window.location.href = mailtoLink;
+
+            // Prevenir que el formulario se envíe de la manera tradicional
+            return false;
+          }
+        </script>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+    
   </main>
 
   <footer id="footer" class="footer position-relative dark-background">
